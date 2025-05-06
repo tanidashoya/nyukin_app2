@@ -1,0 +1,263 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>入金・手取り計算</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 16px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    form {
+      background-color: white;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    form p {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    h2 {
+      margin-top: 32px;
+    }
+
+    ul {
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      list-style: none;
+    }
+
+    li {
+      padding: 6px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>入金・手取り計算</h1>
+  <form method="POST">
+    <p>
+      <label>しょうやの手取り</label>
+      <input type="number" name="tedori_sho">
+    </p>
+    <p>
+      <label>あいりの手取り</label>
+      <input type="number" name="tedori_ai">
+    </p>
+    <p>
+      <label>しょうやNISA</label>
+      <input type="number" name="nisa_sho" value="20000">
+    </p>
+    <p>
+      <label>あいりNISA</label>
+      <input type="number" name="nisa_ai" value="30000">
+    </p>
+    <p>
+      <label>しょうやiDeCo</label>
+      <input type="number" name="ideco_sho" value="15000">
+    </p>
+    <p>
+      <label>あいりiDeCo</label>
+      <input type="number" name="ideco_ai" value="0">
+    </p>
+    <p>
+      <label>あいりの電気・携帯代</label>
+      <input type="number" name="denki_keitai_ai">
+    </p>
+    <p>
+      <label>もみじ入金目標額</label>
+      <input type="number" name="momiji" value="250000">
+    </p>
+    <p>
+      <button type="submit">計算</button>
+    </p>
+  </form>
+
+  {% if result %}
+  <h2>計算結果</h2>
+  <ul>
+    <li>しょうや入金額: {{ result.nyukin1 }}</li>
+    <li>あいり入金額: {{ result.nyukin2 }}</li>
+    <li>しょうやお小遣い: {{ result.kozukai1 }}</li>
+    <li>あいりお小遣い: {{ result.kozukai2 }}</li>
+  </ul>
+  {% endif %}
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>入金・手取り計算</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 16px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    form {
+      background-color: white;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    form p {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    h2 {
+      margin-top: 32px;
+    }
+
+    ul {
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      list-style: none;
+    }
+
+    li {
+      padding: 6px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>入金・手取り計算</h1>
+  <form method="POST">
+    <p>
+      <label>しょうやの手取り</label>
+      <input type="number" name="tedori_sho">
+    </p>
+    <p>
+      <label>あいりの手取り</label>
+      <input type="number" name="tedori_ai">
+    </p>
+    <p>
+      <label>しょうやNISA</label>
+      <input type="number" name="nisa_sho" value="20000">
+    </p>
+    <p>
+      <label>あいりNISA</label>
+      <input type="number" name="nisa_ai" value="30000">
+    </p>
+    <p>
+      <label>しょうやiDeCo</label>
+      <input type="number" name="ideco_sho" value="15000">
+    </p>
+    <p>
+      <label>あいりiDeCo</label>
+      <input type="number" name="ideco_ai" value="0">
+    </p>
+    <p>
+      <label>あいりの電気・携帯代</label>
+      <input type="number" name="denki_keitai_ai">
+    </p>
+    <p>
+      <label>もみじ入金目標額</label>
+      <input type="number" name="momiji" value="250000">
+    </p>
+    <p>
+      <button type="submit">計算</button>
+    </p>
+  </form>
+
+  {% if result %}
+  <h2>計算結果</h2>
+  <ul>
+    <li>しょうや入金額: {{ result.nyukin1 }}</li>
+    <li>あいり入金額: {{ result.nyukin2 }}</li>
+    <li>しょうやお小遣い: {{ result.kozukai1 }}</li>
+    <li>あいりお小遣い: {{ result.kozukai2 }}</li>
+  </ul>
+  {% endif %}
+</body>
+</html>
+>>>>>>> 7ed1da4 (初回コミット)
